@@ -1,0 +1,70 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phaka.Azure.Authentication.Activities", "Phaka.Azure.Authentication.Activities\Phaka.Azure.Authentication.Activities.csproj", "{39F41356-E758-43A4-AA19-4EF079793218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phaka.Azure.Authentication.Activities.Tests", "Phaka.Azure.Authentication.Activities.Tests\Phaka.Azure.Authentication.Activities.Tests.csproj", "{B0094575-32D9-4B58-841F-93395DFBDFAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phaka.Activities", "Phaka.Activities\Phaka.Activities.csproj", "{8CBA5C8F-57E8-467E-A714-1C0058309C8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phaka.Azure.ResourceManager.Resources.Activities", "Phaka.Azure.ResourceManager.Resources.Activities\Phaka.Azure.ResourceManager.Resources.Activities.csproj", "{B7EC3FD5-3A28-42FB-8A2F-8AED25CB7B70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phaka.Azure.ResourceManager.Resources.Activities.Tests", "Phaka.Azure.ResourceManager.Resources.Activities.Tests\Phaka.Azure.ResourceManager.Resources.Activities.Tests.csproj", "{EEEE4E97-6D2E-4BBE-86BC-95C1F25CF92B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phaka.Azure.Testing.Framework", "Phaka.Azure.Testing.Framework\Phaka.Azure.Testing.Framework.csproj", "{150B4E35-DACE-410A-8BC9-ED6443AABDDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phaka.Azure.ResourceManager.Storage.Activities", "Phaka.Azure.ResourceManager.Storage.Activities\Phaka.Azure.ResourceManager.Storage.Activities.csproj", "{49C56E05-39AE-48D1-81D0-995E9B3CD3FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phaka.Azure.ResourceManager.Storage.Activities.Tests", "Phaka.Azure.ResourceManager.Storage.Activities.Tests\Phaka.Azure.ResourceManager.Storage.Activities.Tests.csproj", "{2FCDF859-A05A-493F-B242-29C1C656B6C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Phaka.Azure.ResourceManager.Activities", "Phaka.Azure.ResourceManager.Activities\Phaka.Azure.ResourceManager.Activities.csproj", "{5107AD0E-6A64-410E-9C19-9A7049DFE3FA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39F41356-E758-43A4-AA19-4EF079793218}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F41356-E758-43A4-AA19-4EF079793218}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F41356-E758-43A4-AA19-4EF079793218}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F41356-E758-43A4-AA19-4EF079793218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0094575-32D9-4B58-841F-93395DFBDFAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0094575-32D9-4B58-841F-93395DFBDFAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0094575-32D9-4B58-841F-93395DFBDFAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0094575-32D9-4B58-841F-93395DFBDFAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CBA5C8F-57E8-467E-A714-1C0058309C8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CBA5C8F-57E8-467E-A714-1C0058309C8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CBA5C8F-57E8-467E-A714-1C0058309C8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CBA5C8F-57E8-467E-A714-1C0058309C8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7EC3FD5-3A28-42FB-8A2F-8AED25CB7B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7EC3FD5-3A28-42FB-8A2F-8AED25CB7B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7EC3FD5-3A28-42FB-8A2F-8AED25CB7B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7EC3FD5-3A28-42FB-8A2F-8AED25CB7B70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEEE4E97-6D2E-4BBE-86BC-95C1F25CF92B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEEE4E97-6D2E-4BBE-86BC-95C1F25CF92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEEE4E97-6D2E-4BBE-86BC-95C1F25CF92B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEEE4E97-6D2E-4BBE-86BC-95C1F25CF92B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{150B4E35-DACE-410A-8BC9-ED6443AABDDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{150B4E35-DACE-410A-8BC9-ED6443AABDDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{150B4E35-DACE-410A-8BC9-ED6443AABDDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{150B4E35-DACE-410A-8BC9-ED6443AABDDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49C56E05-39AE-48D1-81D0-995E9B3CD3FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49C56E05-39AE-48D1-81D0-995E9B3CD3FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49C56E05-39AE-48D1-81D0-995E9B3CD3FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49C56E05-39AE-48D1-81D0-995E9B3CD3FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FCDF859-A05A-493F-B242-29C1C656B6C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FCDF859-A05A-493F-B242-29C1C656B6C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FCDF859-A05A-493F-B242-29C1C656B6C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FCDF859-A05A-493F-B242-29C1C656B6C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5107AD0E-6A64-410E-9C19-9A7049DFE3FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5107AD0E-6A64-410E-9C19-9A7049DFE3FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5107AD0E-6A64-410E-9C19-9A7049DFE3FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5107AD0E-6A64-410E-9C19-9A7049DFE3FA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

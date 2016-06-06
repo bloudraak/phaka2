@@ -1,0 +1,289 @@
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Phaka.Azure.ResourceManager.Storage.Activities.Tests.Workflows.Scenario4"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mca="clr-namespace:Microsoft.CSharp.Activities;assembly=System.Activities"
+ xmlns:paaa="clr-namespace:Phaka.Azure.Authentication.Activities;assembly=Phaka.Azure.Authentication.Activities"
+ xmlns:parrar="clr-namespace:Phaka.Azure.ResourceManager.Resources.Activities.ResourceGroups;assembly=Phaka.Azure.ResourceManager.Resources.Activities"
+ xmlns:parsa="clr-namespace:Phaka.Azure.ResourceManager.Storage.Activities;assembly=Phaka.Azure.ResourceManager.Storage.Activities"
+ xmlns:s="clr-namespace:System;assembly=mscorlib"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ClientId" Type="InArgument(x:String)" />
+    <x:Property Name="ClientSecret" Type="InArgument(x:String)" />
+    <x:Property Name="TenantId" Type="InArgument(s:Guid)" />
+    <x:Property Name="SubscriptionId" Type="InArgument(s:Guid)" />
+    <x:Property Name="ResourceGroupName" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap2010:WorkflowViewState.IdRef>Phaka.Azure.ResourceManager.Storage.Activities.Tests.Workflows.Scenario1_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Text</x:String>
+      <x:String>Phaka.Azure.ResourceManager.Storage.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.CSharp</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>Microsoft.Threading.Tasks</AssemblyReference>
+      <AssemblyReference>Microsoft.Threading.Tasks.Extensions.Desktop</AssemblyReference>
+      <AssemblyReference>Microsoft.Threading.Tasks.Extensions</AssemblyReference>
+      <AssemblyReference>System.Net</AssemblyReference>
+      <AssemblyReference>System.Net.Http.Extensions</AssemblyReference>
+      <AssemblyReference>System.Net.Http.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
+      <AssemblyReference>System.Net.Http.WebRequest</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>Hyak.Common</AssemblyReference>
+      <AssemblyReference>Microsoft.Azure.Common</AssemblyReference>
+      <AssemblyReference>Microsoft.Azure.Common.NetFramework</AssemblyReference>
+      <AssemblyReference>Microsoft.Azure.Management.Storage</AssemblyReference>
+      <AssemblyReference>Phaka.Azure.Testing.Framework</AssemblyReference>
+      <AssemblyReference>nunit.framework</AssemblyReference>
+      <AssemblyReference>Phaka.Azure.Authentication.Activities</AssemblyReference>
+      <AssemblyReference>Phaka.Azure.ResourceManager.Resources.Activities</AssemblyReference>
+      <AssemblyReference>Phaka.Activities</AssemblyReference>
+      <AssemblyReference>Phaka.Azure.ResourceManager.Storage.Activities</AssemblyReference>
+      <AssemblyReference>Phaka.Azure.ResourceManager.Activities</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>Phaka.Azure.ResourceManager.Storage.Activities.Tests</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="accessToken" />
+    </Sequence.Variables>
+    <paaa:AcquireTokenActivity sap2010:WorkflowViewState.IdRef="AcquireTokenActivity_1">
+      <paaa:AcquireTokenActivity.ClientId>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">ClientId</mca:CSharpValue>
+        </InArgument>
+      </paaa:AcquireTokenActivity.ClientId>
+      <paaa:AcquireTokenActivity.ClientSecret>
+        <InArgument x:TypeArguments="x:String">
+          <mca:CSharpValue x:TypeArguments="x:String">ClientSecret</mca:CSharpValue>
+        </InArgument>
+      </paaa:AcquireTokenActivity.ClientSecret>
+      <paaa:AcquireTokenActivity.Result>
+        <OutArgument x:TypeArguments="x:String">
+          <mca:CSharpReference x:TypeArguments="x:String">accessToken</mca:CSharpReference>
+        </OutArgument>
+      </paaa:AcquireTokenActivity.Result>
+      <paaa:AcquireTokenActivity.TenantId>
+        <InArgument x:TypeArguments="s:Guid">
+          <mca:CSharpValue x:TypeArguments="s:Guid">TenantId</mca:CSharpValue>
+        </InArgument>
+      </paaa:AcquireTokenActivity.TenantId>
+    </paaa:AcquireTokenActivity>
+    <TryCatch sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Variables>
+        <Variable x:TypeArguments="parsa:StorageAccount" Name="storageAccount" />
+      </TryCatch.Variables>
+      <TryCatch.Try>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Default="test7129d82fc4d64c2a8" Name="accountName" />
+          </Sequence.Variables>
+          <parrar:NewAzureResourceGroupActivity Tags="{x:Null}" sap2010:WorkflowViewState.IdRef="NewAzureResourceGroupActivity_1" Location="West US">
+            <parrar:NewAzureResourceGroupActivity.AccessToken>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">accessToken</mca:CSharpValue>
+              </InArgument>
+            </parrar:NewAzureResourceGroupActivity.AccessToken>
+            <parrar:NewAzureResourceGroupActivity.Name>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">ResourceGroupName</mca:CSharpValue>
+              </InArgument>
+            </parrar:NewAzureResourceGroupActivity.Name>
+            <parrar:NewAzureResourceGroupActivity.SubscriptionId>
+              <InArgument x:TypeArguments="s:Guid">
+                <mca:CSharpValue x:TypeArguments="s:Guid">SubscriptionId</mca:CSharpValue>
+              </InArgument>
+            </parrar:NewAzureResourceGroupActivity.SubscriptionId>
+          </parrar:NewAzureResourceGroupActivity>
+          <parsa:NewAzureStorageAccountActivity Tags="{x:Null}" sap2010:WorkflowViewState.IdRef="NewAzureStorageAccountActivity_1" Location="West US">
+            <parsa:NewAzureStorageAccountActivity.AccessToken>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">accessToken</mca:CSharpValue>
+              </InArgument>
+            </parsa:NewAzureStorageAccountActivity.AccessToken>
+            <parsa:NewAzureStorageAccountActivity.Name>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">accountName</mca:CSharpValue>
+              </InArgument>
+            </parsa:NewAzureStorageAccountActivity.Name>
+            <parsa:NewAzureStorageAccountActivity.ResourceGroupName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">ResourceGroupName</mca:CSharpValue>
+              </InArgument>
+            </parsa:NewAzureStorageAccountActivity.ResourceGroupName>
+            <parsa:NewAzureStorageAccountActivity.Result>
+              <OutArgument x:TypeArguments="parsa:StorageAccount">
+                <mca:CSharpReference x:TypeArguments="parsa:StorageAccount">storageAccount</mca:CSharpReference>
+              </OutArgument>
+            </parsa:NewAzureStorageAccountActivity.Result>
+            <parsa:NewAzureStorageAccountActivity.Sku>
+              <InArgument x:TypeArguments="parsa:AccountType">
+                <mca:CSharpValue x:TypeArguments="parsa:AccountType">AccountType.StandardLRS</mca:CSharpValue>
+              </InArgument>
+            </parsa:NewAzureStorageAccountActivity.Sku>
+            <parsa:NewAzureStorageAccountActivity.SubscriptionId>
+              <InArgument x:TypeArguments="s:Guid">
+                <mca:CSharpValue x:TypeArguments="s:Guid">SubscriptionId</mca:CSharpValue>
+              </InArgument>
+            </parsa:NewAzureStorageAccountActivity.SubscriptionId>
+          </parsa:NewAzureStorageAccountActivity>
+          <parsa:RemoveAzureStorageAccountActivity sap2010:WorkflowViewState.IdRef="RemoveAzureStorageAccountActivity_1">
+            <parsa:RemoveAzureStorageAccountActivity.AccessToken>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">accessToken</mca:CSharpValue>
+              </InArgument>
+            </parsa:RemoveAzureStorageAccountActivity.AccessToken>
+            <parsa:RemoveAzureStorageAccountActivity.AccountName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">accountName</mca:CSharpValue>
+              </InArgument>
+            </parsa:RemoveAzureStorageAccountActivity.AccountName>
+            <parsa:RemoveAzureStorageAccountActivity.ResourceGroupName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">ResourceGroupName</mca:CSharpValue>
+              </InArgument>
+            </parsa:RemoveAzureStorageAccountActivity.ResourceGroupName>
+            <parsa:RemoveAzureStorageAccountActivity.SubscriptionId>
+              <InArgument x:TypeArguments="s:Guid">
+                <mca:CSharpValue x:TypeArguments="s:Guid">SubscriptionId</mca:CSharpValue>
+              </InArgument>
+            </parsa:RemoveAzureStorageAccountActivity.SubscriptionId>
+          </parsa:RemoveAzureStorageAccountActivity>
+          <parsa:RemoveAzureStorageAccountActivity sap2010:WorkflowViewState.IdRef="RemoveAzureStorageAccountActivity_2">
+            <parsa:RemoveAzureStorageAccountActivity.AccessToken>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">accessToken</mca:CSharpValue>
+              </InArgument>
+            </parsa:RemoveAzureStorageAccountActivity.AccessToken>
+            <parsa:RemoveAzureStorageAccountActivity.AccountName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">accountName</mca:CSharpValue>
+              </InArgument>
+            </parsa:RemoveAzureStorageAccountActivity.AccountName>
+            <parsa:RemoveAzureStorageAccountActivity.ResourceGroupName>
+              <InArgument x:TypeArguments="x:String">
+                <mca:CSharpValue x:TypeArguments="x:String">ResourceGroupName</mca:CSharpValue>
+              </InArgument>
+            </parsa:RemoveAzureStorageAccountActivity.ResourceGroupName>
+            <parsa:RemoveAzureStorageAccountActivity.SubscriptionId>
+              <InArgument x:TypeArguments="s:Guid">
+                <mca:CSharpValue x:TypeArguments="s:Guid">SubscriptionId</mca:CSharpValue>
+              </InArgument>
+            </parsa:RemoveAzureStorageAccountActivity.SubscriptionId>
+          </parsa:RemoveAzureStorageAccountActivity>
+          <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="Done" />
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <WriteLine sap2010:WorkflowViewState.IdRef="WriteLine_1">
+                <InArgument x:TypeArguments="x:String">
+                  <mca:CSharpValue x:TypeArguments="x:String">exception.ToString()</mca:CSharpValue>
+                </InArgument>
+              </WriteLine>
+              <Throw sap2010:WorkflowViewState.IdRef="Throw_1">
+                <InArgument x:TypeArguments="s:Exception">
+                  <mca:CSharpValue x:TypeArguments="s:Exception">exception</mca:CSharpValue>
+                </InArgument>
+              </Throw>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <parrar:RemoveAzureResourceGroupActivity sap2010:WorkflowViewState.IdRef="RemoveAzureResourceGroupActivity_1">
+          <parrar:RemoveAzureResourceGroupActivity.AccessToken>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">accessToken</mca:CSharpValue>
+            </InArgument>
+          </parrar:RemoveAzureResourceGroupActivity.AccessToken>
+          <parrar:RemoveAzureResourceGroupActivity.Name>
+            <InArgument x:TypeArguments="x:String">
+              <mca:CSharpValue x:TypeArguments="x:String">ResourceGroupName</mca:CSharpValue>
+            </InArgument>
+          </parrar:RemoveAzureResourceGroupActivity.Name>
+          <parrar:RemoveAzureResourceGroupActivity.SubscriptionId>
+            <InArgument x:TypeArguments="s:Guid">
+              <mca:CSharpValue x:TypeArguments="s:Guid">SubscriptionId</mca:CSharpValue>
+            </InArgument>
+          </parrar:RemoveAzureResourceGroupActivity.SubscriptionId>
+        </parrar:RemoveAzureResourceGroupActivity>
+      </TryCatch.Finally>
+    </TryCatch>
+    <sads:DebugSymbol.Symbol>d1pTOlxwaGFrYVxzcmNcUGhha2EuQXp1cmUuUmVzb3VyY2VNYW5hZ2VyLlN0b3JhZ2UuQWN0aXZpdGllcy5UZXN0c1xXb3JrZmxvd3NcU2NlbmFyaW80LnhhbWwrRwP0AQ4CAQFLBWAhAwHUAWEF8gEQAgECUwtTVQMB6gFOC05RAwHjAVgLWFwDAdwBXQtdTwMB1QFmCcgBFAIBMeABCfABMwIBGNABDdsBGAIBA2g6aFECATJqC3oyAwG3AXsLmgEyAgF/mwELsAE1AgFasQELxgE1AgE1xwELxwFSAgEz4wEP4wFYAgEp7QEP7QFZAgEh6AEP6AFeAgEZ0QEP1QEbAgEO1gEP2gEXAgEEaowBapUBAwHTAW0RbVoDAcoBdxF3WwMBwQFyEXJgAwG4AXuNAXuWAQMBtgF+EX5aAwGtAZcBEZcBWwMBpAGNARGNAXEDAZsBkgERkgFvAwGSAYgBEYgBYAMBiQGDARGDAVoDAYABngERngFaAgF2owERowFaAgFtrQERrQFbAgFkqAERqAFgAgFbtAERtAFaAgFRuQERuQFaAgFIwwERwwFbAgE/vgERvgFgAgE2xwFJxwFPAgE00wET0wFlAgEP2AET2AFdAgEF</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="AcquireTokenActivity_1" sap:VirtualizedContainerService.HintSize="417.6,22.4" />
+      <sap2010:ViewStateData Id="NewAzureResourceGroupActivity_1" sap:VirtualizedContainerService.HintSize="211.2,22.4" />
+      <sap2010:ViewStateData Id="NewAzureStorageAccountActivity_1" sap:VirtualizedContainerService.HintSize="211.2,22.4" />
+      <sap2010:ViewStateData Id="RemoveAzureStorageAccountActivity_1" sap:VirtualizedContainerService.HintSize="211.2,22.4" />
+      <sap2010:ViewStateData Id="RemoveAzureStorageAccountActivity_2" sap:VirtualizedContainerService.HintSize="211.2,22.4" />
+      <sap2010:ViewStateData Id="WriteLine_2" sap:VirtualizedContainerService.HintSize="211.2,62.4" />
+      <sap2010:ViewStateData Id="Sequence_2" sap:VirtualizedContainerService.HintSize="233.6,436.8">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="WriteLine_1" sap:VirtualizedContainerService.HintSize="211.2,62.4" />
+      <sap2010:ViewStateData Id="Throw_1" sap:VirtualizedContainerService.HintSize="211.2,22.4" />
+      <sap2010:ViewStateData Id="Sequence_3" sap:VirtualizedContainerService.HintSize="233.6,249.6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Catch`1_1" sap:VirtualizedContainerService.HintSize="403.2,22.4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="RemoveAzureResourceGroupActivity_1" sap:VirtualizedContainerService.HintSize="200,22.4" />
+      <sap2010:ViewStateData Id="TryCatch_1" sap:VirtualizedContainerService.HintSize="417.6,668" />
+      <sap2010:ViewStateData Id="Sequence_1" sap:VirtualizedContainerService.HintSize="440,855.2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Phaka.Azure.ResourceManager.Storage.Activities.Tests.Workflows.Scenario1_1" sap:VirtualizedContainerService.HintSize="480,935.2" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
